@@ -8,11 +8,11 @@ class Vector():
         c = "["
         for i in range(self.row):
             if i == self.row - 1:
-                c += " " + str(self.array[i])[0:4]
+                c += " " + str(self.array[i])
             elif i == 0:
-                c += str(self.array[i])[0:4]
+                c += str(self.array[i])
             else:
-                c += " " + str(self.array[i])[0:4]
+                c += " " + str(self.array[i])
         c += "]"
         return c
 
