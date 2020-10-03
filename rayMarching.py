@@ -1,4 +1,4 @@
-from linear import Vector
+from .linear import Vector
 
 SURFACE_DIST = 0.01
 MAX_DIST = 150.0
