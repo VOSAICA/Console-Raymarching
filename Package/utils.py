@@ -1,5 +1,5 @@
 from .linear import Vector, Matrix
-from .rayMarching import rayMarch, getLight
+from .raymarching import rayMarch, getLight
 
 
 class Screen():

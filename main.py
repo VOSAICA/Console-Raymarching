@@ -1,4 +1,4 @@
-from .utils import Screen
+from Package.utils import Screen
 
 # It will be faster to use multiprocessing, but without it is also ok
 from multiprocessing import Pool

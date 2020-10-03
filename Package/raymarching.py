@@ -48,7 +48,7 @@ def getNormal(p):
 
 
 def getLight(p):
-    lightPos = Vector([0, 5, 9])
+    lightPos = Vector([3, 5, 9])
 
     li = Vector.normalize(lightPos - p)
     n = getNormal(p)
