@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     screen = Screen(256, 208)  # resolution as 256*208
 
-    # uncommet the next line to do calculation with single processor
+    # uncomment the next line to do calculation with single processor
     # screen.calc()
 
     # Do calculation with 4 processor
