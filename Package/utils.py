@@ -53,7 +53,6 @@ class Screen():
 
                 color = Vector([dif])
                 result.array[i][j] = color
-
         return result
 
     def turn2Chara(self, number):
