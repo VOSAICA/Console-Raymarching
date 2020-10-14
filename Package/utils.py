@@ -55,6 +55,22 @@ class Screen():
                 result.array[i][j] = color
         return result
 
+    def calcMul(self, processorNum):
+        from multiprocessing import Pool
+        start, interval = 0, int(self.height / processorNum)
+        pool = Pool(processes=processorNum)
+        processes = []
+
+        for _ in range(processorNum):
+            processes.append(
+                pool.apply_async(self.calcPart, (start, start + interval)))
+            start += interval
+        pool.close()
+        pool.join()
+
+        for process in processes:
+            self.fragColor += process.get()
+
     def turn2Chara(self, number):
         charas = list('''@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxr\
         jft/\\|()1{}[]?-_+~<>i!lI;:,"^`'. ''')

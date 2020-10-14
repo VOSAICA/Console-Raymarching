@@ -48,12 +48,15 @@ def getNormal(p):
 
 
 def getLight(p):
-    lightPos = Vector([3, 5, 9])
+    lightPos = Vector([3, 5, -1])
 
     li = Vector.normalize(lightPos - p)
     n = getNormal(p)
 
     dif = clamp(Vector.innerProd(n, li), 0.0, 1.0)
+
+    if p.array[1] < 0.1:
+        dif *= float(int(p.array[0]+100) % 2 ^ int(p.array[2]+100) % 2) * 0.9
 
     d = rayMarch(p + n * (SURFACE_DIST * 2.0), li)
     if d < Vector.length(lightPos - p):
