@@ -17,7 +17,7 @@ class Screen():
         for i in range(height):
             for j in range(width):
                 self.uv.array[i][j] = Vector.divVec(
-                    self.fragCoord.array[i][j] - (self.resolution * 0.5),
+                    self.fragCoord.array[i][j] - self.resolution * 0.5,
                     self.resolution)
 
     def calc(self):
@@ -26,7 +26,7 @@ class Screen():
                 uv = self.uv.array[i][j]
                 color = Vector([0, 0, 0])
                 ro = Vector([0, 1, 0])
-                rd = Vector([uv.array[0], uv.array[1], 1.]).normalize()
+                rd = Vector([uv.array[0], uv.array[1], 1]).normalize()
 
                 d = rayMarch(ro, rd)
 
@@ -44,7 +44,7 @@ class Screen():
                 uv = self.uv.array[i][j]
                 color = Vector([0, 0, 0])
                 ro = Vector([0, 1, 0])
-                rd = Vector([uv.array[0], uv.array[1], 1.]).normalize()
+                rd = Vector([uv.array[0], uv.array[1], 1]).normalize()
 
                 d = rayMarch(ro, rd)
 
