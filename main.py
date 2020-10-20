@@ -7,8 +7,8 @@ if __name__ == '__main__':
     # It will be faster to use multiprocessing, but without it is also ok
     # For using multiprocessing, change the screen.calc() to screen.calcMul()
 
-    # Change the argument if there are more than 4 cores in your CPU
-    screen.calcMul(4)
+    # Change the argument if there are more than 8 cores in your CPU
+    screen.calcMul(8)
 
     # screen.calc()
 
